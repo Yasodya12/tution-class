@@ -178,14 +178,15 @@
                         <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
                             <div class="card-body p-4 p-md-5">
                                 <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Registration Form</h3>
-                                <form>
+                                <form id="test" >
 
 
                                     <div class="row">
+
                                         <div class="col-md-6 mb-4">
 
                                             <div class="form-outline">
-                                                <input type="text" id="username" class="form-control form-control-lg" />
+                                                <input name="username" type="text" id="username" class="form-control form-control-lg" />
                                                 <label class="form-label" for="firstName">Username</label>
                                             </div>
 
@@ -193,11 +194,15 @@
                                         <div class="col-md-6 mb-4">
 
                                             <div class="form-outline">
-                                                <input type="password" id="password" class="form-control form-control-lg" />
+
+                                                <input name="password" type="password" id="password" class="form-control form-control-lg" />
                                                 <label class="form-label" for="lastName">Password</label>
+
                                             </div>
 
                                         </div>
+
+
                                     </div>
 
 
@@ -206,7 +211,7 @@
                                         <div class="col-md-6 mb-4">
 
                                             <div class="form-outline">
-                                                <input type="text" id="firstName" class="form-control form-control-lg" />
+                                                <input name="firstName" type="text" id="firstName" class="form-control form-control-lg" />
                                                 <label class="form-label" for="firstName">First Name</label>
                                             </div>
 
@@ -214,7 +219,7 @@
                                         <div class="col-md-6 mb-4">
 
                                             <div class="form-outline">
-                                                <input type="text" id="lastName" class="form-control form-control-lg" />
+                                                <input name="lastName" type="text" id="lastName" class="form-control form-control-lg" />
                                                 <label class="form-label" for="lastName">Last Name</label>
                                             </div>
 
@@ -225,7 +230,7 @@
                                         <div class="col-md-6 mb-4 d-flex align-items-center">
 
                                             <div class="form-outline datepicker w-100">
-                                                <input type="text" class="form-control form-control-lg" id="birthdayDate" />
+                                                <input name="birthday" type="date" class="form-control form-control-lg" id="birthdayDate" />
                                                 <label for="birthdayDate" class="form-label">Birthday</label>
                                             </div>
 
@@ -235,20 +240,20 @@
                                             <h6 class="mb-2 pb-1">Gender: </h6>
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="femaleGender"
-                                                       value="option1" checked />
+                                                <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                                                       value="female" checked />
                                                 <label class="form-check-label" for="femaleGender">Female</label>
                                             </div>
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
-                                                       value="option2" />
+                                                <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                                                       value="male" />
                                                 <label class="form-check-label" for="maleGender">Male</label>
                                             </div>
 
                                             <div class="form-check form-check-inline">
-                                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
-                                                       value="option3" />
+                                                <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                                                       value="other" />
                                                 <label class="form-check-label" for="otherGender">Other</label>
                                             </div>
 
@@ -259,7 +264,7 @@
                                         <div class="col-md-6 mb-4 pb-2">
 
                                             <div class="form-outline">
-                                                <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                                                <input name="studentEmail" type="email" id="emailAddress" class="form-control form-control-lg" />
                                                 <label class="form-label" for="emailAddress">Email</label>
                                             </div>
 
@@ -267,7 +272,7 @@
                                         <div class="col-md-6 mb-4 pb-2">
 
                                             <div class="form-outline">
-                                                <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                                                <input name="studentTelNumber" type="tel" id="phoneNumber" class="form-control form-control-lg" />
                                                 <label class="form-label" for="phoneNumber">Phone Number</label>
                                             </div>
 
@@ -279,7 +284,7 @@
                                         <div class="col-md-6 mb-4 pb-2">
 
                                             <div class="form-outline">
-                                                <input type="email" id="parent-email" class="form-control form-control-lg" />
+                                                <input name="parentEmail" type="email" id="parent-email" class="form-control form-control-lg" />
                                                 <label class="form-label" for="emailAddress">Parent-email</label>
                                             </div>
 
@@ -287,7 +292,7 @@
                                         <div class="col-md-6 mb-4 pb-2">
 
                                             <div class="form-outline">
-                                                <input type="tel" id="parent-contact" class="form-control form-control-lg" />
+                                                <input name="parentTel" type="tel" id="parent-contact" class="form-control form-control-lg" />
                                                 <label class="form-label" for="phoneNumber">Parent phone Number</label>
                                             </div>
 
@@ -307,7 +312,7 @@
                                                 <div class="d-flex justify-content-center">
                                                     <div class="btn btn-primary btn-rounded">
                                                         <label class="form-label text-white m-1" for="customFile2">Choose file</label>
-                                                        <input type="file" class="form-control d-none" id="customFile2" onchange="displaySelectedImage(event, 'selectedAvatar')" />
+                                                        <input name="pictureFaceeee" type="file" class="form-control d-none" id="customFile2" onchange="displaySelectedImage(event, 'selectedAvatar')" />
                                                     </div>
                                                 </div>
 
@@ -319,12 +324,12 @@
                                     <div class="row">
                                         <div class="col-12">
 
-                                            <select class="select form-control-lg">
+                                            <select name="target" class="select form-control-lg">
                                                 <option value="1" disabled>Choose option</option>
-                                                <option value="2">Grade 5 Scholarship</option>
-                                                <option value="2">GCE/AL Maths</option>
-                                                <option value="3">GCE/AL Commerce</option>
-                                                <option value="4">University Selected</option>
+                                                <option value="Grade-5-Scholarship">Grade 5 Scholarship</option>
+                                                <option value="GCE/AL-Maths">GCE/AL Maths</option>
+                                                <option value="GCE/AL-Commerce">GCE/AL Commerce</option>
+                                                <option value="University-Selected">University Selected</option>
                                             </select>
                                             <label class="form-label select-label">Choose Your Category</label>
 
@@ -372,27 +377,29 @@
                             <!-- to get an API token!-->
                             <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Name input-->
-                                <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                                    <label for="name">Full name</label>
-                                    <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                                </div>
+
                                 <!-- Email address input-->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                    <input name="email" class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
                                     <label for="email">Email address</label>
                                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                 </div>
-                                <!-- Phone number input-->
+
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                                    <label for="phone">Phone number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                                    <input name="subject" class="form-control" id="name" type="text" placeholder="Subject..." data-sb-validations="required" />
+                                    <label for="name">Subject </label>
+                                    <div class="invalid-feedback" data-sb-feedback="name:required">A subject is required.</div>
                                 </div>
+                                <!-- Phone number input-->
+<!--                                <div class="form-floating mb-3">-->
+<!--                                    <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />-->
+<!--                                    <label for="phone">Phone number</label>-->
+<!--                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>-->
+<!--                                </div>-->
                                 <!-- Message input-->
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                    <textarea name="message" class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                     <label for="message">Message</label>
                                     <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                                 </div>
@@ -439,22 +446,7 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
-        <script>
-            function displaySelectedImage(event, elementId) {
-                const selectedImage = document.getElementById(elementId);
-                const fileInput = event.target;
 
-                if (fileInput.files && fileInput.files[0]) {
-                    const reader = new FileReader();
-
-                    reader.onload = function(e) {
-                        selectedImage.src = e.target.result;
-                    };
-
-                    reader.readAsDataURL(fileInput.files[0]);
-                }
-            }
-        </script>
         <script src="controllers/homeController.js"></script>
     </body>
 </html>
