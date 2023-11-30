@@ -6,34 +6,37 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <title>Div Inside Image</title>
   <style>
-    .image-container {
-      position: relative;
-      display: inline-block;
-    }
 
-    .centered-content {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 20px;
-      border-radius: 10px;
+
+
+    .custom-file-upload {
+      border-radius: 50%;
+      display: inline-block;
+      position: relative;
+      padding: 6px;
+      cursor: pointer;
+      background: linear-gradient(270deg, #3fa1a9, #79f1a4);
+      margin-bottom: 25px;
+    }
+    .img-wrap {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    img {
+      width: auto;
+      height: 100%;
     }
   </style>
 </head>
 <body>
 
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Dropdown button
-  </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-  </div>
-</div>
 
+<label for="photo-upload" class="custom-file-upload fas">
+  <div class="img-wrap img-upload">
+    <img for="photo-upload" src="https://github.com/OlgaKoplik/CodePen/blob/master/profile.jpg?raw=true">
+  </div><input id="photo-upload" type="file"></label>
 </body>
 </html>
