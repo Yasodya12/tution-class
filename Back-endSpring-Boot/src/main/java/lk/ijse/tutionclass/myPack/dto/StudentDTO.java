@@ -23,5 +23,6 @@ public class StudentDTO {
     String studentTelNumber;
     String parentEmail;
     String parentTel;
+    String classType;
     String pictureFaceeee;
 }

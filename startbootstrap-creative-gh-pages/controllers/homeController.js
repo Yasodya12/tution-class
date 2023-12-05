@@ -57,7 +57,7 @@ function addStudent(){
         firstName:$("#firstName").val(),
         lastName:$("#lastName").val(),
         birthday:$("#birthdayDate").val(),
-
+        classType:$("#classType").val(),
         gender:$('input[name="gender"]:checked').val(),
         studentEmail:$("#emailAddress").val(),
         studentTelNumber:$("#phoneNumber").val(),

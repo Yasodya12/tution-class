@@ -16,9 +16,18 @@ public class EditDetailService {
     @Autowired
     ModelMapper mapper;
 
+
     public StudentDTO getStudent(String id){
         Student student = studentRepo.findById(id).get();
+
         return mapper.map(student, StudentDTO.class);
+
+
+    }
+
+    public void updateStudent(StudentDTO studentDTO){
+        Student map = mapper.map(studentDTO, Student.class);
+       studentRepo.save(map);
 
     }
 }

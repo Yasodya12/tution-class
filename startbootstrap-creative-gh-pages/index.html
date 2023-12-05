@@ -8,6 +8,7 @@
         <title>Creative - Start Bootstrap Theme</title>
         <style>
 
+
         </style>
 <!--        <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
         <!-- Favicon-->
@@ -39,11 +40,14 @@
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                         <li class="nav-item "><div class="dropdown">
                             <a class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Log-out
+                                Log-in
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#"> <i class="bi bi-pen"></i>Manage Account</a></li>
-                                <li><a class="dropdown-item" href="#">  <i class="bi bi-box-arrow-right"></i> Log-out</a></li>
+
+                                <li>
+                                    <a id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModalogIn" class="dropdown-item" href="#"> <i class="bi bi-pen"></i>Log-in</a>
+
+                                </li>
 
 
                             </ul>
@@ -55,6 +59,71 @@
                 </div>
             </div>
         </nav>
+<!--Log In Model-->
+        <div class="modal fade  form my-4 mx-5" id="exampleModalogIn" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered container mt-5">
+
+                    <div class="modal-content modal-header modal-body modal-footer row justify-content-center">
+
+
+
+
+
+
+
+
+
+
+
+
+<!--                                <h2 class="text-center text-dark mt-5">Login Form</h2>-->
+<!--                                <div class="text-center mb-5 text-dark">Made with bootstrap</div>-->
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <!-- Masthead-->
         <header class="masthead">
@@ -344,7 +413,7 @@
                                     <div class="row">
                                         <div class="col-12">
 
-                                            <select name="target" class="select form-control-lg">
+                                            <select id="classType" name="classType" class="select form-control-lg">
                                                 <option value="1" disabled>Choose option</option>
                                                 <option value="Grade-5-Scholarship">Grade 5 Scholarship</option>
                                                 <option value="GCE/AL-Maths">GCE/AL Maths</option>
@@ -465,8 +534,18 @@
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+
+
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
 
         <script src="controllers/homeController.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#myBtn").click(function(){
+                    $("#myModal").modal();
+                });
+            });
+        </script>
+
     </body>
 </html>

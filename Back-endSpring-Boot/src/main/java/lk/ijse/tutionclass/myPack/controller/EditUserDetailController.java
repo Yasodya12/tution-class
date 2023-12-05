@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 
+
 @RestController
 @RequestMapping("/editStudent")
 @CrossOrigin
@@ -19,6 +20,14 @@ public class EditUserDetailController {
         System.out.println(id);
         StudentDTO student = editDetailService.getStudent(id);
         System.out.println(student);
-        return new ResponseUtil("Ok","Sucefull",student);
+        return new ResponseUtil("Ok","Successful",student);
+    }
+
+    @PutMapping
+    public ResponseUtil updateStudent(@ModelAttribute StudentDTO studentDTO){
+        editDetailService.updateStudent(studentDTO);
+
+        return new ResponseUtil("Ok","Successful",studentDTO);
+
     }
 }

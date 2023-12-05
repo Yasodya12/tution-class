@@ -29,11 +29,11 @@ public class HomeController {
 
 
         System.out.println("use "+user);
-        homeService.addStudent(user);
+//        homeService.addStudent(user);
 //        System.out.println(img);
 //        homeService.register(img);
-//        System.out.println(studentDTO);
-        return new ResponseUtil("ok","Student Sucefully Added", user);
+        System.out.println(user);
+        return new ResponseUtil("ok","Student Successfully Added", user);
     }
     @PostMapping(path = {"/imgSaave"})
     public void saveImg( @RequestParam("img")MultipartFile img) throws IOException {
